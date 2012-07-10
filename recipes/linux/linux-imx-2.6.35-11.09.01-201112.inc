@@ -1,0 +1,1 @@
+COMPATIBLE_MACHINES = "imx53qsb"
