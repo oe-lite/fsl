@@ -1,0 +1,9 @@
+COMPATIBLE_MACHINES = "imx53qsb"
+
+addtask deploy before build
+do_deploy[recdeptask] += "DEPENDS:do_deploy"
+
+def do_stage(d):
+    return
+
+DEPENDS = "rootfs kernel u-boot-imx"
