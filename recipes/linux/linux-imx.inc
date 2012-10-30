@@ -6,3 +6,5 @@ SRC_URI += "git://oe-lite.org/linux/linux-imx.git;protocol=git;${SRC_REV}"
 SRC_URI .= ";repo=linux.git"
 SRC_REV ?= "tag=rel_imx_${@d.get('PV').replace('-','_')}"
 S = "${SRCDIR}/linux-imx"
+
+DEFAULT_PREFERENCE:HOST_CPU_arm_imx = "2"
