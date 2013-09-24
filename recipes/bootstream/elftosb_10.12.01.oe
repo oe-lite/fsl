@@ -1,0 +1,4 @@
+require elftosb.inc
+
+SRC_URI += "file://stdafx-stdint-h.patch"
+SRC_URI += "file://parallel-make.patch"

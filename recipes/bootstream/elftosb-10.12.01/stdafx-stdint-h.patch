@@ -1,0 +1,23 @@
+--- elftosb-10.12.01/stdafx.h~orig	2011-12-29 12:50:06.652758118 +0100
++++ elftosb-10.12.01/stdafx.h	2011-12-29 12:50:56.384756871 +0100
+@@ -27,7 +27,8 @@
+ // For Linux systems only, types.h only defines the signed
+ // integer types.  This is not professional code.
+ // Update: They are defined in the header files in the more recent version of redhat enterprise gcc.
+-#include "/usr/include/sys/types.h"
++//#include "/usr/include/sys/types.h"
++#include <stdint.h>
+ //typedef unsigned long uint32_t;
+ //typedef unsigned short uint16_t;
+ //typedef unsigned char uint8_t;
+--- elftosb-10.12.01/common/stdafx.h~orig	2011-12-29 12:51:16.884756358 +0100
++++ elftosb-10.12.01/common/stdafx.h	2011-12-29 12:51:44.416755668 +0100
+@@ -27,7 +27,7 @@
+ // For Linux systems only, types.h only defines the signed
+ // integer types.  This is not professional code.
+ // Update: They are defined in the header files in the more recent version of redhat enterprise gcc.
+-#include "/usr/include/sys/types.h"
++//#include "/usr/include/sys/types.h"
+ #include <stdint.h>
+ //typedef unsigned long uint32_t;
+ //typedef unsigned short uint16_t;

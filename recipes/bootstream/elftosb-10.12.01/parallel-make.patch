@@ -1,0 +1,8 @@
+--- elftosb-10.12.01/makefile~orig	2011-12-29 13:00:52.828741926 +0100
++++ elftosb-10.12.01/makefile	2011-12-29 13:01:05.664741604 +0100
+@@ -29,4 +29,4 @@
+ 
+ all clean elftosb sbtool keygen:
+ 	@mkdir -p ${BUILD_DIR};
+-	make -C ${BUILD_DIR} -f ${SRC_DIR}/makefile.rules SRC_DIR=${SRC_DIR} $@;
++	$(MAKE) -C ${BUILD_DIR} -f ${SRC_DIR}/makefile.rules SRC_DIR=${SRC_DIR} $@;
