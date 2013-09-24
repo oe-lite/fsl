@@ -1,0 +1,24 @@
+DESCRIPTION ?= "Bootstream for Freescale i.MX platforms"
+HOMEPAGE ?= "http://www.freescale.com/imxtools"
+LICENCE ?= "GPLv2"
+
+inherit c make
+
+CLASS_DEPENDS += "native:elftosb"
+
+CMDLINE1 ?= ""
+CMDLINE2 ?= ""
+CMDLINE3 ?= ""
+CMDLINE4 ?= ""
+
+IMX_BOOTLETS_LINUX_PREP ?= "linux_prep"
+
+EXTRA_OEMAKE_COMPILE += "'CROSS_COMPILE=${TARGET_PREFIX}' \
+'BOARD=${BOARD}' \
+'CMDLINE1=${CMDLINE1}' 'CMDLINE2=${CMDLINE2}' \
+'CMDLINE3=${CMDLINE3}' 'CMDLINE4=${CMDLINE4}' \
+${IMX_BOOTLETS_LINUX_PREP} boot_prep power_prep"
+
+INHIBIT_PACKAGE_STRIP = "1"
+
+PARALLEL_MAKE = ""
