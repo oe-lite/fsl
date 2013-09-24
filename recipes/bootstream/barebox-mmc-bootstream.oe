@@ -1,0 +1,6 @@
+DESCRIPTION = "Bootstream for booting Barebox from MMC/SD card"
+
+require barebox-bootstream.inc
+
+SBFILE = "barebox-mmc.sb"
+DEPLOY_FILENAME = "${MACHINE}-barebox-mmc"

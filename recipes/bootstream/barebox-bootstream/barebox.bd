@@ -1,0 +1,34 @@
+options {
+	driveTag = 0x00;
+	flags = 0x01;
+}
+
+sources {
+	power_prep="${S}/power_prep/power_prep";
+	boot_prep="${S}/boot_prep/boot_prep";
+	barebox="${HOST_SYSROOT}/boot/barebox";
+}
+
+section (0) {
+
+	//----------------------------------------------------------
+	// Power Supply initialization
+	//----------------------------------------------------------
+	load power_prep;
+	load ivt (entry = power_prep:_start) > 0x8000;
+	hab call 0x8000;
+
+	//----------------------------------------------------------
+	// SDRAM initialization
+	//----------------------------------------------------------
+	load boot_prep;
+	load ivt (entry = boot_prep:_start) > 0x8000;
+	hab call 0x8000;
+
+	//----------------------------------------------------------
+	//  Load and call Barebox ELF image
+	//----------------------------------------------------------
+	load barebox;
+	load ivt (entry = barebox:_stext) > 0x8000;
+	hab jump 0x8000;
+}
