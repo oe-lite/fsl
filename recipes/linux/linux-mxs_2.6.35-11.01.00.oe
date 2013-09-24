@@ -1,0 +1,7 @@
+inherit kernel
+require linux-mxs.inc
+
+COMPATIBLE_MACHINES = "imx28evk"
+SRC_URI += "file://defconfig"
+
+DEFAULT_PREFERENCE = "2"
