@@ -1,0 +1,4 @@
+inherit u-boot
+require ${PN}.inc
+
+COMPATIBLE_MACHINES = "imx53qsb"

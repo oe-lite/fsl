@@ -1,0 +1,3 @@
+inherit kernel-headers
+require linux-imx.inc
+require linux-imx-${PV}.inc

@@ -1,0 +1,9 @@
+OE-lite/i.MX metadata
+---------------------
+
+This is the i.MX metadata of the OE-lite project, containing recipes for
+building the i.MX specific software components, such as i.MX specific Linux
+kernel, bootloaders and so on.
+
+OE-lite is an embedded Linux build system,
+See http://oe-lite.org for more information.
