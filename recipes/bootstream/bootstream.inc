@@ -10,11 +10,11 @@ SRC_URI_IMX_BOOTLETS = "http://oe-lite.org/mirror/imx/imx-bootlets-src-${USE_imx
 S = "${SRCDIR}/imx-bootlets-src-${USE_imxbootlets_version}"
 
 RECIPE_FLAGS += "imxbootlets_board"
-#COMPATIBLE_IF_FLAGS += "imxbootlets_board"
+COMPATIBLE_IF_FLAGS += "imxbootlets_board"
 BOARD ?= "${USE_imxbootlets_board}"
 
 RECIPE_FLAGS += "imxbootlets_chipfamily"
-#COMPATIBLE_IF_FLAGS += "imxbootlets_chipfamily"
+COMPATIBLE_IF_FLAGS += "imxbootlets_chipfamily"
 ELFTOSB_CHIP_FAMILY ?= "${USE_imxbootlets_chipfamily}"
 
 BDFILE_MANGLE_VARS = "S HOST_SYSROOT"
